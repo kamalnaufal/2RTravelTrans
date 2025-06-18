@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>TRAVEL 2R TRANS</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="assets/img/HOMETRAV.jpg" rel="icon">
+  <link href="assets/img/HOMETRAV.jpg" rel="semicolon-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+<script>
+  function sendToWhatsApp() {
+    var nama = document.getElementById("nama").value;
+    var hp = document.getElementById("hp").value;
+    var alamat = document.getElementById("alamat").value;
+    var tujuan = document.getElementById("tujuan").value;
+    var tanggal = document.getElementById("tanggal").value;
+
+    var pesan = `Halo, saya ingin memesan layanan travel:\n\n` +
+                `Nama: ${nama}\n` +
+                `No. HP: ${hp}\n` +
+                `Alamat Jemput: ${alamat}\n` +
+                `Tujuan: ${tujuan}\n` +
+                `Tanggal Berangkat: ${tanggal}`;
+
+    var nomorWa = "6285720309608"; // Ganti dengan nomor WhatsApp admin (pakai kode negara, contoh 62)
+    var url = `https://wa.me/${nomorWa}?text=${encodeURIComponent(pesan)}`;
+    window.open(url, "_blank");
+  }
+</script>
+
+
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center">
+
+      <a href="index.html" class="logo d-flex align-items-center me-auto">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <img src="assets/img/HOMETRAV1.png" alt="">
+        <h1 class="sitename">2R TRANS</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="#hero" class="active">Home</a></li>
+          <li><a href="#profil">Profil</a></li>
+          <li><a href="#layanan">Layanan</a></li>
+          <li><a href="#armada">Armada</a></li>
+          <li><a href="#pricing">Rute Travel</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <a class="btn-getstarted" href="#about">Book Now</a>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Hero Section -->
+    <section  id="hero" class="hero">
+      <div class="container-hero">
+           <img src="assets/img/2R.jpg" alt="Hero Image" class="hero-image" >
+          </div>
+    </section><!-- /Hero Section -->
+
+
+    
+    <section id="clients" class="clients section light-background">
+
+      <div class="container" data-aos="zoom-in">
+
+        <div class="swiper init-swiper">
+          <script type="application/json" class="swiper-config">
+            {
+              "loop": true,
+              "speed": 600,
+              "autoplay": {
+                "delay": 5000
+              },
+              "slidesPerView": "auto",
+              "pagination": {
+                "el": ".swiper-pagination",
+                "type": "bullets",
+                "clickable": true
+              },
+              "breakpoints": {
+                "320": {
+                  "slidesPerView": 2,
+                  "spaceBetween": 40
+                },
+                "480": {
+                  "slidesPerView": 3,
+                  "spaceBetween": 60
+                },
+                "640": {
+                  "slidesPerView": 4,
+                  "spaceBetween": 80
+                },
+                "992": {
+                  "slidesPerView": 5,
+                  "spaceBetween": 120
+                },
+                "1200": {
+                  "slidesPerView": 6,
+                  "spaceBetween": 120
+                }
+              }
+            }
+          </script>
+          <div class="swiper-wrapper align-items-center">
+            <div class="swiper-slide"><img src="assets/img/clients/Toyota.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/download.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/isuzu.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/daihatsu.png" class="img-fluid" alt=""></div>
+          </div>
+        </div>
+
+      </div>
+
+    </section> 
+
+    <!-- About Section -->
+    <section  id="profil" class="profil" class="service section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Profil</h2>
+        <p style="text-align: justify;">2R Trans adalah perusahaan layanan transportasi darat yang berkomitmen memberikan perjalanan yang nyaman, aman, dan tepat waktu untuk berbagai kebutuhan Anda. Berdiri dengan semangat pelayanan prima, 2R Trans melayani berbagai rute di Pulau Jawa dan sekitarnya, dengan armada mobil yang terawat dan sopir berpengalaman.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+          </div><!-- End Service Item -->
+    
+          <section class="visi-misi-section">
+  <div class="visi-misi-container">
+    <div class="visi-box">
+      <h2>Visi</h2>
+      <p style="text-align: justify;">Menjadi penyedia layanan transportasi darat terdepan di Indonesia yang mengutamakan kenyamanan, keamanan, dan kepuasan pelanggan.</p>
+    </div>
+    <div class="misi-box">
+      <h2>Misi</h2>
+      <ul>
+        <li>Memberikan layanan transportasi berkualitas dan tepat waktu.</li>
+        <li>Menyediakan armada yang bersih, nyaman, dan layak jalan.</li>
+        <li>Mengutamakan keramahan dan profesionalisme dalam setiap perjalanan.</li>
+        <li>Menyediakan sistem pemesanan yang mudah, cepat, dan transparan.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+    </section><!-- /Services Section -->
+
+    <!-- Pricing Section -->
+    <section id="layanan" class="pricing section light-background">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>LAYANAN</h2>
+        <p></p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="100">
+    <div class="pricing-item">
+      <h3>Door To Door</h3>
+      <img src="assets/img/dor.jpg" alt="Layanan Reguler" class="img-fluid rounded mb-3" style="width: 100%; height: 200px; object-fit: cover;">
+      <h5><span>Start From</span></h5>
+      <h4><sup>Rp</sup>200.000<span> / orang</span></h4>
+      <ul>
+        <li><i class="bi bi-check"></i> Penjemputan Langsung</li>
+        <li><i class="bi bi-check"></i> Hemat Waktu & Tenaga</li>
+        <li><i class="bi bi-check"></i> Kenyamanan Maksimal</li>
+        <li><i class="bi bi-check"></i> Driver Profesional & Ramah</li>
+        <li><i class="bi bi-check"></i> Layanan Flexibel dan terjadwal</li>
+      </ul>
+      <a href="https://wa.me/6285141138240?text=Saya%20Berminat%20Memesan%20Layanan%20Door%20To%20Door.%0ANama%20%3A%0AAlamat%20Jemput%20%3A%0ATujuan%20%3A%0ATanggal%20Berangkat%20%3A" class="buy-btn">Pesan Sekarang</a>
+    </div>
+  </div><!-- End Pricing Item -->
+
+<div class="col-lg-4" data-aos="zoom-in" data-aos-delay="100">
+    <div class="pricing-item">
+      <h3>Pengiriman Paket Ekspres</h3>
+      <img src="assets/img/eks.jpg" alt="Layanan Reguler" class="img-fluid rounded mb-3" style="width: 100%; height: 200px; object-fit: cover;">
+      <h5><span>Start From</span></h5>
+      <h4><sup>Rp</sup>150.000<span> / orang</span></h4>
+      <ul>
+        <li><i class="bi bi-check"></i> Pengiriman Cepat dan Tepat Waktu</li>
+        <li><i class="bi bi-check"></i> Layanan Jemput Paket ke Lokasi</li>
+        <li><i class="bi bi-check"></i> Keamanan Paket Terjamin</li>
+        <li><i class="bi bi-check"></i> Jangkauan Luas hingga Lintas Kota</li>
+        <li><i class="bi bi-check"></i> Harga Kompetitif & Transparan</li>
+      </ul>
+     <a href="https://wa.me/6285141138240?text=Saya%20Berminat%20Memesan%20Layanan%20Door%20To%20Door.%0ANama%20%3A%0AAlamat%20Jemput%20%3A%0ATujuan%20%3A%0ATanggal%20Berangkat%20%3A" class="buy-btn">Pesan Sekarang</a>
+    </div>
+  </div><!-- End Pricing Item -->
+
+  
+          <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="200">
+            <div class="pricing-item featured">
+              <h3>Antar Jemput Bandara-Stasiun-Pelabuhan</h3>
+              <img src="assets/img/bandara.jpg" alt="Layanan Reguler" class="img-fluid rounded mb-3" style="width: 100%; height: 200px; object-fit: cover;">
+              <h5><span>Start From</span></h5>
+              <h4><sup>Rp</sup>200.000<span> / orang</span></h4>
+              <ul>
+               <li><i class="bi bi-check"></i> <span>Harga Terjangkau dan Transparan</span></li>
+                <li><i class="bi bi-check"></i> <span>Driver Profesional dan Ramah</span></li>
+                <li><i class="bi bi-check"></i> <span>Armada Nyaman dan Terawat</span></li>
+                <li><i class="bi bi-check"></i> <span>Kenyamanan Maksimal</li>
+        <li><i class="bi bi-check"></i> <sapan>Driver Profesional & Ramah</sapan></li>
+              </ul>
+             <a href="https://wa.me/6285141138240?text=Saya%20Berminat%20Memesan%20Layanan%20Door%20To%20Door.%0ANama%20%3A%0AAlamat%20Jemput%20%3A%0ATujuan%20%3A%0ATanggal%20Berangkat%20%3A" class="buy-btn">Pesan Sekarang</a>
+    </div>
+          </div><!-- End Pricing Item -->
+
+          <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="300">
+            <div class="pricing-item">
+              <h3>Travel Reguler</h3>
+               <img src="assets/img/tg.jpg" alt="Layanan Reguler" class="img-fluid rounded mb-3" style="width: 100%; height: 200px; object-fit: cover;">
+              <h5><span>Start From</span></h5>
+              <h4><sup>Rp</sup>200.000<span> / orang</span></h4>
+              <ul>
+                <li><i class="bi bi-check"></i> <span>Jadwal Keberangkatan Tetap & Teratu</span></li>
+                <li><i class="bi bi-check"></i> <span>Harga Lebih Terjangkau</span></li>
+                <li><i class="bi bi-check"></i> <span>Armada Nyaman & Terawat</span></li>
+        <li><i class="bi bi-check"></i> Kenyamanan Maksimal</li>
+        <li><i class="bi bi-check"></i> Driver Profesional & Ramah</li>
+              </ul>
+              <a href="https://wa.me/6285141138240?text=Saya%20Berminat%20Memesan%20Layanan%20Door%20To%20Door.%0ANama%20%3A%0AAlamat%20Jemput%20%3A%0ATujuan%20%3A%0ATanggal%20Berangkat%20%3A" class="buy-btn">Pesan Sekarang</a>
+    </div>
+          </div><!-- End Pricing Item -->
+
+<div class="col-lg-4" data-aos="zoom-in" data-aos-delay="300">
+            <div class="pricing-item">
+              <h3>Sewa Kendaraan</h3>
+               <img src="assets/img/sewa.jpg" alt="Layanan Reguler" class="img-fluid rounded mb-3" style="width: 100%; height: 200px; object-fit: cover;">
+              <h5><span>Start From</span></h5>
+              <h4><sup>Rp</sup>200.000<span> / orang</span></h4>
+              <ul>
+                <li><i class="bi bi-check"></i> <span>Fleksibilitas Perjalanan</span></li>
+                <li><i class="bi bi-check"></i> <span>Kenyamanan & Privasi</span></li>
+                <li><i class="bi bi-check"></i> <span>Pilihan Armada Beragam</span></li>
+        <li><i class="bi bi-check"></i> Fasilitas Menarik</li>
+        <li><i class="bi bi-check"></i> Dengan atau Tanpa Sopir</li>
+              </ul>
+             <a href="https://wa.me/6285141138240?text=Saya%20Berminat%20Memesan%20Layanan%20Door%20To%20Door.%0ANama%20%3A%0AAlamat%20Jemput%20%3A%0ATujuan%20%3A%0ATanggal%20Berangkat%20%3A" class="buy-btn">Pesan Sekarang</a>
+    </div>
+          </div><!-- End Pricing Item -->
+
+<div class="col-lg-4" data-aos="zoom-in" data-aos-delay="300">
+            <div class="pricing-item">
+              <h3>Angkut Barang</h3>
+               <img src="assets/img/pick.jpg" alt="Layanan Reguler" class="img-fluid rounded mb-3" style="width: 100%; height: 200px; object-fit: cover;">
+              <h5><span>Start From</span></h5>
+              <h4><sup>Rp</sup>200.000<span> / orang</span></h4>
+              <ul>
+                <li><i class="bi bi-check"></i> <span>Muat Barang Cukup Banya</span></li>
+                <li><i class="bi bi-check"></i> <span>Proses Bongkar Muat Cepat</span></li>
+                <li><i class="bi bi-check"></i> <span>Cocok untuk Berbagai Kebutuhan</span></li>
+        <li><i class="bi bi-check"></i> Waktu Pengiriman Lebih Cepat</li>
+        <li><i class="bi bi-check"></i> Tersedia Beragam Ukuran dan Kapasitas</li>
+              </ul>
+              <a href="https://wa.me/6285141138240?text=Saya%20Berminat%20Memesan%20Layanan%20Door%20To%20Door.%0ANama%20%3A%0AAlamat%20Jemput%20%3A%0ATujuan%20%3A%0ATanggal%20Berangkat%20%3A" class="buy-btn">Pesan Sekarang</a>
+    </div>
+          </div><!-- End Pricing Item -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Pricing Section -->
+    <!-- Portfolio Section -->
+    <section id="armada" class="portfolio section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Armada</h2>
+        <p>Armada lengkap dan terawat siap menemani perjalanan Anda dengan aman dan nyaman ke berbagai tujuan!</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+
+          <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
+            <li data-filter="*" class="filter-active">All</li>
+            <li data-filter=".filter-app">Minibus</li>
+            <li data-filter=".filter-product">Van</li>
+            <li data-filter=".filter-branding">Pick UP</li>
+          </ul><!-- End Portfolio Filters -->
+
+          <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+              <img src="assets/img/avan.png" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Toyota Avanza G</h4>
+                <p>Syifa Championship</p>
+                <a href="#" title="More Details" class="details-link">
+                  <i class="bi bi-whatsapp"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+              <img src="assets/img/sigraa.png" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Daihatsu Sigra</h4>
+                <p>strength</p>
+                <a href="#" title="More Details" class="details-link"> 
+                  <i class="bi bi-whatsapp"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+              <img src="assets/img/hiace.png" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Toyota HiAce</h4>
+                <p>Keluarga Besar Sanekala</p>
+                <a href="#" title="More Details" class="details-link"> 
+                  <i class="bi bi-whatsapp"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+              <img src="assets/img/carry.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Suzuki Carry</h4>
+                <p>Syifa Championship</p>
+                <a href="#" title="More Details" class="details-link"> 
+                  <i class="bi bi-whatsapp"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+              <img src="assets/img/veloz.png" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Toyota Avanza Veloz</h4>
+                <p>strength</p>
+                <a href="#" title="More Details" class="details-link">
+                   <i class="bi bi-whatsapp"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+              <img src="assets/img/Luxio-D.png.webp" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Daihatsu Luxio</h4>
+                <p>Keluarga Besar Sanekala</p>
+                <a href="#" title="More Details" class="details-link">
+                   <i class="bi bi-whatsapp"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+           
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+              <img src="assets/img/granmax-blindvan.webp" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Daihatsu Grandmax</h4>
+                <p>Stand Your Ground</p>
+                <a href="#" title="More Details" class="details-link">
+                  <i class="bi bi-whatsapp"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+              <img src="assets/img/xenia.png" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Daihatsu Xenia</h4>
+                <p>strength</p>
+                <a href="#" title="More Details" class="details-link">
+                   <i class="bi bi-whatsapp"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+              <img src="assets/img/elf.png" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Isuzu Elf</h4>
+                <p>Keluarga Besar Sanekala</p>
+                <a href="#" title="More Details" class="details-link">
+                   <i class="bi bi-whatsapp"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+          </div><!-- End Portfolio Container -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Portfolio Section -->
+
+    <!-- Team Section -->
+    <section id="team" class="team section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Team</h2>
+        <p>Tim kami terdiri dari pelatih berpengalaman dan staf yang siap membantu jalannya latihan dan kegiatan sehari-hari. Fokus kami adalah memberikan latihan yang aman, efektif, dan sesuai kebutuhan setiap anggota.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="team-member d-flex align-items-start">
+              <div class="pic"><img src="assets/img/team/bayu.jpg" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>Bayu Pangestu</h4>
+                <span>Head Coach</span>
+                <p>Pelatih utama dengan pengalaman bertahun-tahun di Boxing, Kickboxing, dan Muay Thai. Fokus pada teknik, disiplin, dan pengembangan mental serta fisik peserta.</p>
+                <div class="social">
+                  <a href=""><i class="bi bi-tiktok"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href="https://www.instagram.com/pangestubayu12?igsh=MWc5YWN5bWo1OW5tcw=="><i class="bi bi-instagram"></i></a>
+                  <a href=""> <i class="bi bi-linkedin"></i> </a>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Team Member -->
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="team-member d-flex align-items-start">
+              <div class="pic"><img src="assets/img/team/zenal.jpg" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>Muhamad Zaenal</h4>
+                <span>Coach</span>
+                <p>Melatih peserta di semua level dengan pendekatan yang ramah dan efektif. Membantu meningkatkan skill, stamina, dan kepercayaan diri.</p>
+                <div class="social">
+                  <a href=""><i class="bi bi-tiktok"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href="https://www.instagram.com/mzmutaqin?igsh=N3p3eW52cjk3YzZj"><i class="bi bi-instagram"></i></a>
+                  <a href=""> <i class="bi bi-linkedin"></i> </a>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Team Member -->
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="team-member d-flex align-items-start">
+              <div class="pic"><img src="assets/img/team/opay.jpg" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>Kamal Naufal Ramadhan</h4>
+                <span>Admin</span>
+                <p>Mengatur jadwal, pendaftaran, dan kebutuhan anggota. Ramah, cepat tanggap, dan siap membantu semua keperluan di dalam maupun luar kelas.</p>
+                <div class="social">
+                  <a href=""><i class="bi bi-tiktok"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href="https://www.instagram.com/k.nfll?igsh=MThob3Y2aHE5bjh1cQ=="><i class="bi bi-instagram"></i></a>
+                  <a href=""> <i class="bi bi-linkedin"></i> </a>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Team Member -->
+        </div>
+
+      </div>
+
+    </section><!-- /Team Section -->
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Testimonials</h2>
+        <p>Pendapat dan pengalaman peserta adalah cerminan kualitas latihan kami. Berikut beberapa cerita nyata dari mereka yang telah merasakan manfaat Boxing, Kickboxing, dan Muay Thai mulai dari peningkatan kebugaran hingga rasa percaya diri yang lebih baik.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="swiper init-swiper">
+          <script type="application/json" class="swiper-config">
+            {
+              "loop": true,
+              "speed": 600,
+              "autoplay": {
+                "delay": 5000
+              },
+              "slidesPerView": "auto",
+              "pagination": {
+                "el": ".swiper-pagination",
+                "type": "bullets",
+                "clickable": true
+              }
+            }
+          </script>
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="assets/img/testimonials/daus.jpg" class="testimonial-img" alt="">
+                <h3>Firdaus</h3>
+                <h4>pelajar</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>Latihannya capek tapi seru banget. Pelatihnya sabar dan ngajarin dari dasar. Sekarang badan jauh lebih fit!</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="assets/img/testimonials/nisa.jpg" class="testimonial-img" alt="">
+                <h3>Anisa Aulia</h3>
+                <h4>Pelajar</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>Awalnya ikut buat olahraga biasa, tapi jadi nagih! Tekniknya dapet, mental juga makin kuat.</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="assets/img/testimonials/bagir.jpg" class="testimonial-img" alt="">
+                <h3>Bagir</h3>
+                <h4>Karyawan Swasta</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>Latihan di sini bikin saya lebih semangat jaga pola hidup sehat. Suasananya positif dan penuh dukungan</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="assets/img/testimonials/ilham.jpg" class="testimonial-img" alt="">
+                <h3>Ilham</h3>
+                <h4>Mahasiswa</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>Setiap sesi selalu terasa menantang tapi menyenangkan. Progress-nya kerasa banget dari minggu ke minggu.<span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+              </div>
+            </div><!-- End testimonial item -->
+
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+
+    </section><!-- /Testimonials Section -->
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /Faq 2 Section -->
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Contact</h2>
+        <p>Punya pertanyaan soal jadwal, pendaftaran, atau program latihan? Hubungi kami langsung kami siap membantu.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-5">
+
+            <div class="info-wrap">
+              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
+                <i class="bi bi-geo-alt flex-shrink-0"></i>
+                <div>
+                  <h3>Address</h3>
+                  <p>Gor K.o.n.i, Jl. Cikaro No.56, Tangulun, Kec. Majalaya, Kabupaten Bandung, Jawa Barat 40384</p>
+                </div>
+              </div><!-- End Info Item -->
+
+              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
+                <i class="bi bi-telephone flex-shrink-0"></i>
+                <div>
+                  <h3>Call Us</h3>
+                  <p>+6285720309608</p>
+                </div>
+              </div><!-- End Info Item -->
+
+              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
+                <i class="bi bi-envelope flex-shrink-0"></i>
+                <div>
+                  <h3>Email Us</h3>
+                  <p>kamalnaufal16@gmail.com</p>
+                </div>
+              </div><!-- End Info Item -->
+
+              <iframe
+                src="https://www.google.com/maps/embed/v1/place?q=gor+k.o.n.i+majalaya&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"
+                frameborder="0" style="border:0; width: 100%; height: 270px;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+            </div>
+          </div>
+
+          <div class="col-lg-7">
+            <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up"
+              data-aos-delay="200">
+              <div class="row gy-4">
+<form id="whatsapp-form" onsubmit="sendToWhatsApp(); return false;" style="max-width: 500px; margin: auto;">
+  <label>Nama:</label>
+  <input type="text" id="nama" placeholder="Masukkan nama Anda" required><br><br>
+
+  <label>No. HP:</label>
+  <input type="text" id="hp" placeholder="08xxxxxxxxxx" required><br><br>
+
+  <label>Alamat Jemput:</label>
+  <input type="text" id="alamat" placeholder="Alamat lengkap penjemputan" required><br><br>
+
+  <label>Tujuan:</label>
+  <input type="text" id="tujuan" placeholder="Tujuan perjalanan" required><br><br>
+
+  <label>Tanggal Berangkat:</label>
+  <input type="date" id="tanggal" required><br><br>
+
+  <button type="submit">Pesan via WhatsApp</button>
+</form>
+
+                </div>
+
+              </div>
+            </form>
+          </div><!-- End Contact Form -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Contact Section -->
+
+  </main>
+
+  <footer id="footer" class="footer">
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6 footer-about">
+          <a href="index.html" class="d-flex align-items-center">
+            <span class="sitename">2R TRANS</span>
+          </a>
+          <div class="footer-contact pt-3">
+            <p>Kp. Saparako</p>
+            <p> Majalaya, Kec. Majalaya, Kabupaten Bandung, Jawa Barat 40382</p>
+            <p class="mt-3"><strong>Phone:</strong> <span>+6285141138240</span></p>
+            <p><strong>Email:</strong> <span>rizal@gmail.com</span></p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-12">
+          <h4>Follow Us</h4>
+          <p>Yuk, follow dan jadi bagian dari komunitas kami! Lihat aktivitas latihan, kompetisi, dan semangat keluarga besar kami setiap harinya.</p>
+          <div class="social-links d-flex">
+            <a href="https://www.tiktok.com/@sanekalafightingcamp?_t=ZS-8wjANYgzBNI&_r=1"><i class="bi bi-tiktok"></i></a>
+            <a href="#facebook"><i class="bi bi-facebook"></i></a>
+            <a href="https://www.instagram.com/sanekalafightingcamp?igsh=ZWgzeHJiZnpkZmhz"><i class="bi bi-instagram"></i></a>
+            <a href="#linkedin"><i class="bi bi-whatsapp"></i></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">Kamal Naufal Ramadhan
+      </strong> <span>All Rights Reserved</span></p>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you've purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+        Designed by <a href="https://www.instagram.com/k.nfll?igsh=MThob3Y2aHE5bjh1cQ==">Kamal</a>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
