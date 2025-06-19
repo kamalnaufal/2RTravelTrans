@@ -25,34 +25,16 @@
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
-<script>
-  function sendToWhatsApp() {
-    var nama = document.getElementById("nama").value;
-    var hp = document.getElementById("hp").value;
-    var alamat = document.getElementById("alamat").value;
-    var tujuan = document.getElementById("tujuan").value;
-    var tanggal = document.getElementById("tanggal").value;
-
-    var pesan = `Halo, saya ingin memesan layanan travel:\n\n` +
-                `Nama: ${nama}\n` +
-                `No. HP: ${hp}\n` +
-                `Alamat Jemput: ${alamat}\n` +
-                `Tujuan: ${tujuan}\n` +
-                `Tanggal Berangkat: ${tanggal}`;
-
-    var nomorWa = "6285720309608"; // Ganti dengan nomor WhatsApp admin (pakai kode negara, contoh 62)
-    var url = `https://wa.me/${nomorWa}?text=${encodeURIComponent(pesan)}`;
-    window.open(url, "_blank");
-  }
-</script>
-
-
 </head>
-
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
 <body class="index-page">
 
   <header id="header" class="header d-flex align-items-center fixed-top">
@@ -70,7 +52,7 @@
           <li><a href="#profil">Profil</a></li>
           <li><a href="#layanan">Layanan</a></li>
           <li><a href="#armada">Armada</a></li>
-          <li><a href="#pricing">Rute Travel</a></li>
+          <li><a href="#rute">Rute Travel</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
@@ -86,7 +68,11 @@
     <!-- Hero Section -->
     <section  id="hero" class="hero">
       <div class="container-hero">
+        <div class="slider">
            <img src="assets/img/2R.jpg" alt="Hero Image" class="hero-image" >
+           <img src="assets/img/3R.jpg" alt="Hero Image" class="hero-image" >
+           <img src="assets/img/4R.jpg" alt="Hero Image" class="hero-image" >
+          </div>
           </div>
     </section><!-- /Hero Section -->
 
@@ -245,7 +231,7 @@
           <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="300">
             <div class="pricing-item">
               <h3>Carter Drop</h3>
-               <img src="assets/img/tg.jpg" alt="Layanan Reguler" class="img-fluid rounded mb-3" style="width: 100%; height: 200px; object-fit: cover;">
+               <img src="assets/img/carter.png" alt="Layanan Reguler" class="img-fluid rounded mb-3" style="width: 100%; height: 200px; object-fit: cover;">
               <h5><span>Start From</span></h5>
               <h4><sup>Rp</sup>500.000<span> / orang</span></h4>
               <ul>
@@ -415,8 +401,435 @@
         </div>
 
       </div>
+<div class="container" data-aos="fade-up">
+    <div class="section-title">
+      <h2>Fasilitas Mobil</h2>
+      <p>Kenyamanan Anda adalah prioritas kami</p>
+    </div>
 
+    <div class="row gy-4">
+      <div class="col-lg-3 col-md-4 col-sm-6">
+        <div class="card">
+          <img src="assets/img/ac.jpg" alt="AC Dingin">
+          <h5 class="card-title">AC Dingin</h5>
+          <p>Mobil dilengkapi AC untuk kenyamanan perjalanan Anda.</p>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-4 col-sm-6">
+        <div class="card">
+          <img src="assets/img/usb.jpg" alt="Charger USB">
+          <h5 class="card-title">Charger USB</h5>
+          <p>Tersedia port USB untuk pengisian daya gadget Anda.</p>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-4 col-sm-6">
+        <div class="card">
+          <img src="assets/img/aud.webp" alt="Audio Hiburan">
+          <h5 class="card-title">Audio Hiburan</h5>
+          <p>Musik atau radio selama perjalanan untuk hiburan Anda.</p>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-4 col-sm-6">
+        <div class="card">
+          <img src="assets/img/jok.jpg" alt="Tempat Duduk Nyaman">
+          <h5 class="card-title">Tempat Duduk Nyaman</h5>
+          <p>Kursi ergonomis dan empuk, memberikan kenyamanan maksimal sepanjang perjalanan.</p>
+        </div>
+      </div>
+    </div>
+  </div>
     </section><!-- /Portfolio Section -->
+
+  
+<section id="rute" class="rute section">
+  <div class="container" data-aos="fade-up">
+    <div class="section-title">
+      <h2>Rute Perjalanan</h2>
+      <p>Pilih rute perjalanan favorit Anda dari Bandung</p>
+    </div>
+    <h4 class="mt-4">Rute Utara</h4>
+    <div class="row gy-4">
+      <!-- Rute Utara Lengkap -->
+      <div class="col-lg-3 col-md-4 col-sm-6">
+        <div class="card h-100 text-center">
+          <img src="assets/img/cianjur.webp" class="card-img-top" alt="Bandung - Cianjur">
+          <div class="card-body">
+            <h5 class="card-title">Bandung - Cianjur</h5>
+            <a href="https://wa.me/6285141138240?text=Halo,%20saya%20ingin%20pesan%20travel%20Bandung%20-%20Cianjur" class="btn btn-primary">Pesan via WhatsApp</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-4 col-sm-6">
+        <div class="card h-100 text-center">
+          <img src="assets/img/bogor.webp" class="card-img-top" alt="Bandung - Bogor">
+          <div class="card-body">
+            <h5 class="card-title">Bandung - Bogor</h5>
+            <a href="https://wa.me/6285141138240?text=Halo,%20saya%20ingin%20pesan%20travel%20Bandung%20-%20Bogor" class="btn btn-primary">Pesan via WhatsApp</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-4 col-sm-6">
+        <div class="card h-100 text-center">
+          <img src="assets/img/karawng.jpeg" class="card-img-top" alt="Bandung - Karawang">
+          <div class="card-body">
+            <h5 class="card-title">Bandung - Karawang</h5>
+            <a href="https://wa.me/6285141138240?text=Halo,%20saya%20ingin%20pesan%20travel%20Bandung%20-%20Karawang" class="btn btn-primary">Pesan via WhatsApp</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-4 col-sm-6">
+        <div class="card h-100 text-center">
+          <img src="assets/img/cikarang.webp" class="card-img-top" alt="Bandung - Cikarang">
+          <div class="card-body">
+            <h5 class="card-title">Bandung - Cikarang</h5>
+            <a href="https://wa.me/6285141138240?text=Halo,%20saya%20ingin%20pesan%20travel%20Bandung%20-%20Cikarang" class="btn btn-primary">Pesan via WhatsApp</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-4 col-sm-6">
+        <div class="card h-100 text-center">
+          <img src="assets/img/tage.webp" class="card-img-top" alt="Bandung - Tangerang">
+          <div class="card-body">
+            <h5 class="card-title">Bandung - Tangerang</h5>
+            <a href="https://wa.me/6285141138240?text=Halo,%20saya%20ingin%20pesan%20travel%20Bandung%20-%20Tangerang" class="btn btn-primary">Pesan via WhatsApp</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-4 col-sm-6">
+        <div class="card h-100 text-center">
+          <img src="assets/img/depok.jpg" class="card-img-top" alt="Bandung - Depok">
+          <div class="card-body">
+            <h5 class="card-title">Bandung - Depok</h5>
+            <a href="https://wa.me/6285141138240?text=Halo,%20saya%20ingin%20pesan%20travel%20Bandung%20-%20Depok" class="btn btn-primary">Pesan via WhatsApp</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-4 col-sm-6">
+        <div class="card h-100 text-center">
+          <img src="assets/img/jakata.jpg" class="card-img-top" alt="Bandung - Jakarta">
+          <div class="card-body">
+            <h5 class="card-title">Bandung - Jakarta</h5>
+            <a href="https://wa.me/6285141138240?text=Halo,%20saya%20ingin%20pesan%20travel%20Bandung%20-%20Jakarta" class="btn btn-primary">Pesan via WhatsApp</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-4 col-sm-6">
+        <div class="card h-100 text-center">
+          <img src="assets/img/bekasi.jpg" class="card-img-top" alt="Bandung - Bekasi">
+          <div class="card-body">
+            <h5 class="card-title">Bandung - Bekasi</h5>
+            <a href="https://wa.me/6285141138240?text=Halo,%20saya%20ingin%20pesan%20travel%20Bandung%20-%20Bekasi" class="btn btn-primary">Pesan via WhatsApp</a>
+          </div>
+        </div>
+      </div>
+
+    <h4 class="mt-5">Rute Selatan</h4>
+    <div class="row gy-4">
+      <!-- Rute Selatan Lengkap -->
+      <div class="col-lg-3 col-md-4 col-sm-6">
+        <div class="card h-100 text-center">
+          <img src="assets/img/garut.jpeg" class="card-img-top" alt="Bandung - Garut">
+          <div class="card-body">
+            <h5 class="card-title">Bandung - Garut</h5>
+            <a href="https://wa.me/6285141138240?text=Halo,%20saya%20ingin%20pesan%20travel%20Bandung%20-%20Garut" class="btn btn-primary">Pesan via WhatsApp</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-4 col-sm-6">
+        <div class="card h-100 text-center">
+          <img src="assets/img/tasik.webp" class="card-img-top" alt="Bandung - Tasik">
+          <div class="card-body">
+            <h5 class="card-title">Bandung - Tasik</h5>
+            <a href="https://wa.me/6285141138240?text=Halo,%20saya%20ingin%20pesan%20travel%20Bandung%20-%20Tasik" class="btn btn-primary">Pesan via WhatsApp</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-4 col-sm-6">
+        <div class="card h-100 text-center">
+          <img src="assets/img/ciamis.jpeg" class="card-img-top" alt="Bandung - Ciamis">
+          <div class="card-body">
+            <h5 class="card-title">Bandung - Ciamis</h5>
+            <a href="https://wa.me/6285141138240?text=Halo,%20saya%20ingin%20pesan%20travel%20Bandung%20-%20Ciamis" class="btn btn-primary">Pesan via WhatsApp</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-4 col-sm-6">
+        <div class="card h-100 text-center">
+          <img src="assets/img/banjar.jpg" class="card-img-top" alt="Bandung - Banjar">
+          <div class="card-body">
+            <h5 class="card-title">Bandung - Banjar</h5>
+            <a href="https://wa.me/6285141138240?text=Halo,%20saya%20ingin%20pesan%20travel%20Bandung%20-%20Banjar" class="btn btn-primary">Pesan via WhatsApp</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-4 col-sm-6">
+        <div class="card h-100 text-center">
+          <img src="assets/img/pangan.jpg" class="card-img-top" alt="Bandung - Pangandaran">
+          <div class="card-body">
+            <h5 class="card-title">Bandung - Pangandaran</h5>
+            <a href="https://wa.me/6285141138240?text=Halo,%20saya%20ingin%20pesan%20travel%20Bandung%20-%20Pangandaran" class="btn btn-primary">Pesan via WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<h4 class="mt-5">Rute Bandara</h4>
+    <div class="row gy-4">
+      <div class="col-lg-3 col-md-4 col-sm-6">
+        <div class="card h-100 text-center">
+          <img src="assets/img/soe.webp" class="card-img-top" alt="Bandung - Bandara Soetta">
+          <div class="card-body">
+            <h5 class="card-title">Bandung - Bandara Soetta</h5>
+            <a href="https://wa.me/6285141138240?text=Halo,%20saya%20ingin%20pesan%20travel%20Bandung%20-%20Bandara%20Soetta" class="btn btn-primary">Pesan via WhatsApp</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-4 col-sm-6">
+        <div class="card h-100 text-center">
+          <img src="assets/img/kali.jpg" class="card-img-top" alt="Bandung - Bandara Kalijati">
+          <div class="card-body">
+            <h5 class="card-title">Bandung - Bandara Kalijati</h5>
+            <a href="https://wa.me/6285141138240?text=Halo,%20saya%20ingin%20pesan%20travel%20Bandung%20-%20Bandara%20Kalijati" class="btn btn-primary">Pesan via WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Testimonials</h2>
+        <p>Kepuasan Anda, Prioritas Kami! Yuk, lihat apa kata mereka yang sudah memilih 2R Trans.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="swiper init-swiper">
+          <script type="application/json" class="swiper-config">
+            {
+              "loop": true,
+              "speed": 600,
+              "autoplay": {
+                "delay": 5000
+              },
+              "slidesPerView": "auto",
+              "pagination": {
+                "el": ".swiper-pagination",
+                "type": "bullets",
+                "clickable": true
+              }
+            }
+          </script>
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="assets/img/testimonials/bayu.jpg" class="testimonial-img" alt="">
+                <h3>Bayu Pangestu</h3>
+                <h4>Karyawan swasta</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>Layanan 2R Trans benar-benar memuaskan! Supirnya ramah, mobil bersih, dan perjalanan dari Bandung ke Jakarta terasa nyaman. Saya akan pesan lagi minggu depan!</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="assets/img/testimonials/asep.jpg" class="testimonial-img" alt="">
+                <h3>Asep Apriadi</h3>
+                <h4>Bisnis Man</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>Saya pakai layanan door to door 2R Trans ke Pangandaran. Dijemput tepat waktu dan sampai dengan aman. Terima kasih atas pelayanannya yang profesional.</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="assets/img/testimonials/bagir.jpg" class="testimonial-img" alt="">
+                <h3>Bagir</h3>
+                <h4>Karyawan Swasta</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>Travel 2R Trans pilihan terbaik untuk pulang kampung. Harga terjangkau, AC dingin, dan perjalanan cepat tanpa hambatan. Top banget!</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="assets/img/testimonials/iwa.jpg" class="testimonial-img" alt="">
+                <h3>Iwa Kartiwa</h3>
+                <h4>Pedagang</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>Pernah kirim paket lewat 2R Trans, dan nyampenya cepat banget. Kondisi barang aman, gak lecet. Recommended buat pengiriman barang juga!<span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+              </div>
+            </div><!-- End testimonial item -->
+
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+
+    </section><!-- /Testimonials Section -->
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /Faq 2 Section -->
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Contact</h2>
+        <p>Punya pertanyaan soal jadwal, pendaftaran, atau program latihan? Hubungi kami langsung kami siap membantu.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-5">
+
+            <div class="info-wrap">
+              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
+                <i class="bi bi-geo-alt flex-shrink-0"></i>
+                <div>
+                  <h3>Address</h3>
+                  <p>Kp. Saparako, Majalaya, Kec. Majalaya, Kabupaten Bandung, Jawa Barat 40382</p>
+                </div>
+              </div><!-- End Info Item -->
+
+              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
+                <i class="bi bi-telephone flex-shrink-0"></i>
+                <div>
+                  <h3>Call Us</h3>
+                  <p>+6285141138240</p>
+                </div>
+              </div><!-- End Info Item -->
+
+              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
+                <i class="bi bi-envelope flex-shrink-0"></i>
+                <div>
+                  <h3>Email Us</h3>
+                  <p>rizal@gmail.com</p>
+                </div>
+              </div><!-- End Info Item -->
+
+              <iframe
+                src="https://maps.google.com/maps?width=600&height=400&hl=en&q=Grosir%20Kaos%20Polos%20Saparako&t=&z=14&ie=UTF8&iwloc=B&output=embed"
+                frameborder="0" style="border:0; width: 100%; height: 270px;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+            </div>
+          </div>
+
+          <div class="col-lg-7">
+            <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up"
+              data-aos-delay="200">
+              <div class="row gy-4">
+                <script>
+  function sendToWhatsApp() {
+    var nama = document.getElementById("nama").value;
+    var hp = document.getElementById("hp").value;
+    var alamat = document.getElementById("alamat").value;
+    var tujuan = document.getElementById("tujuan").value;
+    var tanggal = document.getElementById("tanggal").value;
+
+    var pesan = `Halo, saya ingin memesan layanan travel:\n\n` +
+                `Nama: ${nama}\n` +
+                `No. HP: ${hp}\n` +
+                `Alamat Jemput: ${alamat}\n` +
+                `Tujuan: ${tujuan}\n` +
+                `Tanggal Berangkat: ${tanggal}`;
+
+    var nomorWa = "6285720309608"; // Ganti dengan nomor WhatsApp admin (pakai kode negara, contoh 62)
+    var url = `https://wa.me/${nomorWa}?text=${encodeURIComponent(pesan)}`;
+    window.open(url, "_blank");
+  }
+</script>
+<form id="whatsapp-form" onsubmit="sendToWhatsApp(); return false;" style="max-width: 500px; margin: auto;">
+  <label>Nama:</label>
+  <input type="text" id="nama" placeholder="Masukkan nama Anda" required><br><br>
+
+  <label>No. HP:</label>
+  <input type="text" id="hp" placeholder="08xxxxxxxxxx" required><br><br>
+
+  <label>Alamat Jemput:</label>
+  <input type="text" id="alamat" placeholder="Alamat lengkap penjemputan" required><br><br>
+
+  <label>Tujuan:</label>
+  <input type="text" id="tujuan" placeholder="Tujuan perjalanan" required><br><br>
+
+  <label>Tanggal Berangkat:</label>
+  <input type="date" id="tanggal" required><br><br>
+
+  <button type="submit">Pesan via WhatsApp</button>
+</form>
+
+                </div>
+
+              </div>
+            </form>
+          </div><!-- End Contact Form -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Contact Section -->
 
   </main>
 
@@ -443,7 +856,7 @@
             <a href="https://www.tiktok.com/@sanekalafightingcamp?_t=ZS-8wjANYgzBNI&_r=1"><i class="bi bi-tiktok"></i></a>
             <a href="#facebook"><i class="bi bi-facebook"></i></a>
             <a href="https://www.instagram.com/sanekalafightingcamp?igsh=ZWgzeHJiZnpkZmhz"><i class="bi bi-instagram"></i></a>
-            <a href="#linkedin"><i class="bi bi-whatsapp"></i></a>
+            <a href="https://wa.me/6285141138240?text=Halo%2C%20saya%20berminat%20dengan%20layanan%20Anda"><i class="bi bi-whatsapp"></i></a>
           </div>
         </div>
 
@@ -451,7 +864,7 @@
     </div>
 
     <div class="container copyright text-center mt-4">
-      <p>© <span>Copyright</span> <strong class="px-1 sitename">Kamal Naufal Ramadhan
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">2R TRANS
       </strong> <span>All Rights Reserved</span></p>
       <div class="credits">
         <!-- All the links in the footer should remain intact. -->
@@ -467,7 +880,6 @@
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
       class="bi bi-arrow-up-short"></i></a>
-
   <!-- Preloader -->
   <div id="preloader"></div>
 
