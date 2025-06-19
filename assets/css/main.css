@@ -903,6 +903,59 @@ section,
   object-fit: cover;
 }
 
+.slider {
+  display: flex;
+  animation: slideAnimation 12s infinite;
+}
+
+.whatsapp-float {
+  position: fixed;
+  width: 55px;
+  height: 55px;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25d366;
+  color: white;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 28px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s;
+}
+
+.whatsapp-float:hover {
+  background-color: #1ebc59;
+}
+
+/* Animation keyframes */
+@keyframes slideAnimation {
+  0% {
+    transform: translateX(0);
+  }
+  33% {
+    transform: translateX(0);
+  }
+  36% {
+    transform: translateX(-100%);
+  }
+  66% {
+    transform: translateX(-100%);
+  }
+  69% {
+    transform: translateX(-200%);
+  }
+  99% {
+    transform: translateX(-200%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
 .profil {
   padding-top: 10px;
   padding-bottom: 0;
@@ -1670,6 +1723,79 @@ section,
   }
 }
 
+
+.rute-section {
+  padding: 60px 0;
+  background-color: #f5f5f5;
+}
+
+.rute-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+  flex-wrap: wrap;
+}
+
+.rute-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 550px;
+}
+
+.rute-button {
+  flex: 1;
+  text-align: right;
+  margin-right: 10px;
+}
+
+.rute-button h2 {
+  text-align: right;
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #0b74b1;
+}
+
+.rute-button p {
+  text-align: right;
+  font-size: 1    8px;
+  margin-bottom: 20px;
+}
+
+.btn-rute {
+  padding: 12px 24px;
+  background-color: #0b74b1;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-rute:hover {
+  background-color: #095c8d;
+}
+
+@media (max-width: 768px) {
+  .rute-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .rute-image,
+  .rute-button {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+
+
+
+
 /*--------------------------------------------------------------
 # Testimonials Section
 --------------------------------------------------------------*/
@@ -2108,3 +2234,94 @@ section,
 .starter-section {
   /* Add your styles here */
 }
+
+
+.rute .card {
+      border: none;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s ease;
+    }
+
+    .rute .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .rute .card-img-top {
+      border-top-left-radius: 12px;
+      border-top-right-radius: 12px;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .rute .card-body {
+      padding: 20px;
+    }
+
+    .rute .card-title {
+      font-size: 18px;
+      margin-bottom: 15px;
+      color: #0b3d91;
+      font-weight: 600;
+    }
+
+    .rute .btn-primary {
+      background-color: #0b74b1;
+      border: none;
+      border-radius: 6px;
+      padding: 10px 20px;
+      font-size: 14px;
+      transition: background-color 0.3s ease;
+    }
+
+    .rute .btn-primary:hover {
+      background-color: #095d8f;
+    }
+
+    @media (max-width: 576px) {
+      .rute .card-title {
+        font-size: 16px;
+      }
+      .rute .btn-primary {
+        padding: 8px 16px;
+        font-size: 13px;
+      }
+    }
+.fasilitas .card {
+      border: none;
+      border-radius: 16px;
+      text-align: center;
+      padding: 20px;
+      background: linear-gradient(145deg, #ffffff, #f1f6fb);
+      box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.05), -8px -8px 20px rgba(255, 255, 255, 0.6);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .fasilitas .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 12px 12px 25px rgba(0, 0, 0, 0.07), -12px -12px 25px rgba(255, 255, 255, 0.7);
+    }
+
+    .fasilitas .card img {
+      height: 150px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-bottom: 20px;
+      width: 100%;
+    }
+
+    .fasilitas .card-title {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 10px;
+      color: #0b3d91;
+    }
+
+    .fasilitas .card p {
+      font-size: 14px;
+      color: #333;
+    }
