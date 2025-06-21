@@ -780,26 +780,6 @@
             <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up"
               data-aos-delay="200">
               <div class="row gy-4">
-                <script>
-  function sendToWhatsApp() {
-    var nama = document.getElementById("nama").value;
-    var hp = document.getElementById("hp").value;
-    var alamat = document.getElementById("alamat").value;
-    var tujuan = document.getElementById("tujuan").value;
-    var tanggal = document.getElementById("tanggal").value;
-
-    var pesan = `Halo, saya ingin memesan layanan travel:\n\n` +
-                `Nama: ${nama}\n` +
-                `No. HP: ${hp}\n` +
-                `Alamat Jemput: ${alamat}\n` +
-                `Tujuan: ${tujuan}\n` +
-                `Tanggal Berangkat: ${tanggal}`;
-
-    var nomorWa = "6285720309608"; // Ganti dengan nomor WhatsApp admin (pakai kode negara, contoh 62)
-    var url = `https://wa.me/${nomorWa}?text=${encodeURIComponent(pesan)}`;
-    window.open(url, "_blank");
-  }
-</script>
 <form id="whatsapp-form" onsubmit="sendToWhatsApp(); return false;">
   <label>Nama:</label>
   <input type="text" id="nama" placeholder="Masukkan nama Anda" required>
