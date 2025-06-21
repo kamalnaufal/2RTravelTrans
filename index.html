@@ -58,7 +58,7 @@
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
 
-      <a class="btn-getstarted" href="#about">Book Now</a>
+      <a class="btn-getstarted" href="https://wa.me/6285141138240?text=Halo,%20saya%20Akan%20Booking">Book Now</a>
 
     </div>
   </header>
@@ -198,7 +198,7 @@
       <h3>Pengiriman Paket Ekspres</h3>
       <img src="assets/img/eks.jpg" alt="Layanan Reguler" class="img-fluid rounded mb-3" style="width: 100%; height: 200px; object-fit: cover;">
       <h5><span>Start From</span></h5>
-      <h4><sup>Rp</sup>150.000<span> / orang</span></h4>
+      <h4><sup>Rp</sup>150.000<span> / paket</span></h4>
       <ul>
         <li><i class="bi bi-check"></i> Pengiriman Cepat dan Tepat Waktu</li>
         <li><i class="bi bi-check"></i> Layanan Jemput Paket ke Lokasi</li>
@@ -233,7 +233,7 @@
               <h3>Carter Drop</h3>
                <img src="assets/img/carter.png" alt="Layanan Reguler" class="img-fluid rounded mb-3" style="width: 100%; height: 200px; object-fit: cover;">
               <h5><span>Start From</span></h5>
-              <h4><sup>Rp</sup>500.000<span> / orang</span></h4>
+              <h4><sup>Rp</sup>500.000<span> / unit</span></h4>
               <ul>
                 <li><i class="bi bi-check"></i> <span>Bensin</span></li>
                 <li><i class="bi bi-check"></i> <span>Harga Lebih Terjangkau</span></li>
@@ -250,7 +250,7 @@
               <h3>Sewa Kendaraan</h3>
                <img src="assets/img/sewa.jpg" alt="Layanan Reguler" class="img-fluid rounded mb-3" style="width: 100%; height: 200px; object-fit: cover;">
               <h5><span>Start From</span></h5>
-              <h4><sup>Rp</sup>250.000<span> / orang</span></h4>
+              <h4><sup>Rp</sup>250.000<span> / unit</span></h4>
               <ul>
                 <li><i class="bi bi-check"></i> <span>Fleksibilitas Perjalanan</span></li>
                 <li><i class="bi bi-check"></i> <span>Kenyamanan & Privasi</span></li>
@@ -267,7 +267,7 @@
               <h3>Angkut Barang</h3>
                <img src="assets/img/pick.jpg" alt="Layanan Reguler" class="img-fluid rounded mb-3" style="width: 100%; height: 200px; object-fit: cover;">
               <h5><span>Start From</span></h5>
-              <h4><sup>Rp</sup>200.000<span> / orang</span></h4>
+              <h4><sup>Rp</sup>200.000<span> / unit</span></h4>
               <ul>
                 <li><i class="bi bi-check"></i> <span>Muat Barang Cukup Banya</span></li>
                 <li><i class="bi bi-check"></i> <span>Proses Bongkar Muat Cepat</span></li>
@@ -533,7 +533,7 @@
         </div>
       </div>
 
-    <h4 class="mt-5">Rute Selatan</h4>
+    <h4 class="mt-4">Rute Selatan</h4>
     <div class="row gy-4">
       <!-- Rute Selatan Lengkap -->
       <div class="col-lg-3 col-md-4 col-sm-6">
@@ -800,24 +800,47 @@
     window.open(url, "_blank");
   }
 </script>
-<form id="whatsapp-form" onsubmit="sendToWhatsApp(); return false;" style="max-width: 500px; margin: auto;">
+<form id="whatsapp-form" onsubmit="sendToWhatsApp(); return false;">
   <label>Nama:</label>
-  <input type="text" id="nama" placeholder="Masukkan nama Anda" required><br><br>
+  <input type="text" id="nama" placeholder="Masukkan nama Anda" required>
 
   <label>No. HP:</label>
-  <input type="text" id="hp" placeholder="08xxxxxxxxxx" required><br><br>
+  <input type="text" id="hp" placeholder="08xxxxxxxxxx" required>
 
   <label>Alamat Jemput:</label>
-  <input type="text" id="alamat" placeholder="Alamat lengkap penjemputan" required><br><br>
+  <input type="text" id="alamat" placeholder="Alamat lengkap penjemputan" required>
 
   <label>Tujuan:</label>
-  <input type="text" id="tujuan" placeholder="Tujuan perjalanan" required><br><br>
+  <input type="text" id="tujuan" placeholder="Tujuan perjalanan" required>
 
   <label>Tanggal Berangkat:</label>
-  <input type="date" id="tanggal" required><br><br>
+  <input type="date" id="tanggal" required>
 
-  <button type="submit">Pesan via WhatsApp</button>
+  <button type="submit" class="btn-wa">Pesan via WhatsApp</button>
 </form>
+
+<script>
+  function sendToWhatsApp() {
+    var nama = document.getElementById("nama").value;
+    var hp = document.getElementById("hp").value;
+    var alamat = document.getElementById("alamat").value;
+    var tujuan = document.getElementById("tujuan").value;
+    var tanggal = document.getElementById("tanggal").value;
+
+    var message = "Halo, Saya ingin memesan layanan travel dengan data berikut:\n\n" +
+                  "Nama : " + nama + "\n" +
+                  "No Hp : " + hp + "\n" +
+                  "Alamat Jemput : " + alamat + "\n" +
+                  "Tujuan : " + tujuan + "\n" +
+                  "Tanggal Berangkat : " + tanggal;
+
+    var encodedMessage = encodeURIComponent(message);
+    var phoneNumber = "6285141138240";
+    var whatsappURL = "https://wa.me/" + phoneNumber + "?text=" + encodedMessage;
+
+    window.open(whatsappURL, '_blank');
+  }
+</script>
 
                 </div>
 
@@ -853,9 +876,9 @@
           <h4>Follow Us</h4>
           <p>Yuk, follow dan jadi bagian dari komunitas kami! Lihat aktivitas latihan, kompetisi, dan semangat keluarga besar kami setiap harinya.</p>
           <div class="social-links d-flex">
-            <a href="https://www.tiktok.com/@sanekalafightingcamp?_t=ZS-8wjANYgzBNI&_r=1"><i class="bi bi-tiktok"></i></a>
+            <a href="#"><i class="bi bi-tiktok"></i></a>
             <a href="#facebook"><i class="bi bi-facebook"></i></a>
-            <a href="https://www.instagram.com/sanekalafightingcamp?igsh=ZWgzeHJiZnpkZmhz"><i class="bi bi-instagram"></i></a>
+            <a href="#"><i class="bi bi-instagram"></i></a>
             <a href="https://wa.me/6285141138240?text=Halo%2C%20saya%20berminat%20dengan%20layanan%20Anda"><i class="bi bi-whatsapp"></i></a>
           </div>
         </div>
