@@ -777,30 +777,39 @@
           </div>
 
           <div class="col-lg-7">
-            <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up"
-              data-aos-delay="200">
-              <div class="row gy-4">
-<form id="whatsapp-form" onsubmit="sendToWhatsApp(); return false;">
-  <label>Nama:</label>
-  <input type="text" id="nama" placeholder="Masukkan nama Anda" required>
-
-  <label>No. HP:</label>
-  <input type="text" id="hp" placeholder="08xxxxxxxxxx" required>
-
-  <label>Alamat Jemput:</label>
-  <input type="text" id="alamat" placeholder="Alamat lengkap penjemputan" required>
-
-  <label>Tujuan:</label>
-  <input type="text" id="tujuan" placeholder="Tujuan perjalanan" required>
-
-  <label>Tanggal Berangkat:</label>
-  <input type="date" id="tanggal" required>
-
-  <button type="submit" class="btn-wa">Pesan via WhatsApp</button>
-</form>
+  <form id="whatsapp-form" onsubmit="sendToWhatsApp(event)" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+    <div class="row gy-4">
+      <div class="col-md-12">
+        <label>Nama:</label>
+        <input type="text" id="nama" class="form-control" placeholder="Masukkan nama Anda" required>
+      </div>
+      <div class="col-md-12">
+        <label>No. HP:</label>
+        <input type="text" id="hp" class="form-control" placeholder="08xxxxxxxxxx" required>
+      </div>
+      <div class="col-md-12">
+        <label>Alamat Jemput:</label>
+        <input type="text" id="alamat" class="form-control" placeholder="Alamat lengkap penjemputan" required>
+      </div>
+      <div class="col-md-12">
+        <label>Tujuan:</label>
+        <input type="text" id="tujuan" class="form-control" placeholder="Tujuan perjalanan" required>
+      </div>
+      <div class="col-md-12">
+        <label>Tanggal Berangkat:</label>
+        <input type="date" id="tanggal" class="form-control" required>
+      </div>
+      <div class="col-md-12 text-center">
+        <button type="submit" class="btn-wa">Pesan via WhatsApp</button>
+      </div>
+    </div>
+  </form>
+</div>
 
 <script>
-  function sendToWhatsApp() {
+  function sendToWhatsApp(event) {
+    event.preventDefault(); // Mencegah form reload
+
     var nama = document.getElementById("nama").value;
     var hp = document.getElementById("hp").value;
     var alamat = document.getElementById("alamat").value;
@@ -808,19 +817,20 @@
     var tanggal = document.getElementById("tanggal").value;
 
     var message = "Halo, Saya ingin memesan layanan travel dengan data berikut:\n\n" +
-                  "Nama : " + nama + "\n" +
-                  "No Hp : " + hp + "\n" +
-                  "Alamat Jemput : " + alamat + "\n" +
-                  "Tujuan : " + tujuan + "\n" +
-                  "Tanggal Berangkat : " + tanggal;
+                  "👱 Nama: " + nama + "\n" +
+                  "📱 No HP: " + hp + "\n" +
+                  "🏠 Alamat Jemput: " + alamat + "\n" +
+                  "🚘 Tujuan: " + tujuan + "\n" +
+                  "📆 Tanggal Berangkat: " + tanggal;
 
     var encodedMessage = encodeURIComponent(message);
-    var phoneNumber = "6285141138240";
+    var phoneNumber = "6285141138240"; // Ganti dengan nomor WhatsApp tujuan
     var whatsappURL = "https://wa.me/" + phoneNumber + "?text=" + encodedMessage;
 
     window.open(whatsappURL, '_blank');
   }
 </script>
+
 
                 </div>
 
