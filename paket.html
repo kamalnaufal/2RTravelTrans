@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Form Door to Door | 2R TRANS</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="assets/img/HOMETRAV.jpg" rel="icon">
+  <link href="assets/img/HOMETRAV.jpg" rel="semicolon-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins&family=Jost&display=swap"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+</head>
+
+<body class="index-page">
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center">
+      <a href="index.html" class="logo d-flex align-items-center me-auto">
+        <img src="assets/img/HOMETRAV1.png" alt="">
+        <h1 class="sitename">2R TRANS</h1>
+      </a>
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+      <a class="btn-getstarted" href="https://wa.me/6285141138240?text=Halo,%20saya%20Akan%20Booking">Book Now</a>
+    </div>
+  </header>
+
+  <!-- ======= Main ======= -->
+    <main class="main" style="margin-top: 120px;">
+  <section class="container" data-aos="fade-up">
+    <div class="section-title text-center">
+      <h2>Form Pengiriman Paket Ekspres</h2>
+      <p>Isi formulir di bawah untuk melakukan pengiriman paket</p>
+    </div>
+    <form id="whatsapp-form" onsubmit="sendToWhatsApp(event)" class="php-email-form">
+      <div class="row gy-4">
+        <div class="col-md-6">
+          <label>Nama Pengirim:</label>
+          <input type="text" id="nama_pengirim" class="form-control" placeholder="Nama lengkap pengirim" required>
+        </div>
+        <div class="col-md-6">
+          <label>No. HP Pengirim:</label>
+          <input type="text" id="hp_pengirim" class="form-control" placeholder="08xxxxxxxxxx" required>
+        </div>
+        <div class="col-md-6">
+          <label>Alamat Jemput (Pengambilan):</label>
+          <input type="text" id="alamat_pengirim" class="form-control" placeholder="Alamat pengambilan paket" required>
+        </div>
+        <div class="col-md-6">
+          <label>Nama Penerima:</label>
+          <input type="text" id="nama_penerima" class="form-control" placeholder="Nama lengkap penerima" required>
+        </div>
+        <div class="col-md-6">
+          <label>No. HP Penerima:</label>
+          <input type="text" id="hp_penerima" class="form-control" placeholder="08xxxxxxxxxx" required>
+        </div>
+        <div class="col-md-6">
+          <label>Alamat Tujuan (Pengantaran):</label>
+          <input type="text" id="alamat_penerima" class="form-control" placeholder="Alamat tujuan paket" required>
+        </div>
+        <div class="col-md-6">
+          <label>Jenis Paket:</label>
+          <input type="text" id="jenis_paket" class="form-control" placeholder="Contoh: Dokumen, Barang Elektronik" required>
+        </div>
+        <div class="col-md-3">
+          <label>Berat (kg):</label>
+          <input type="number" id="berat" class="form-control" placeholder="Contoh: 2" required>
+        </div>
+        <div class="col-md-3">
+          <label>Ukuran (cm):</label>
+          <input type="text" id="ukuran" class="form-control" placeholder="Contoh: 30x20x10" required>
+        </div>
+        <div class="col-md-12">
+          <label>Catatan Tambahan:</label>
+          <textarea id="catatan" class="form-control" placeholder="Opsional: Handle with care, fragile, dll" rows="2"></textarea>
+        </div>
+        <div class="col-12 text-center">
+          <button type="submit" class="btn btn-success px-5 py-2 mt-3">Kirim via WhatsApp</button>
+        </div>
+      </div>
+    </form>
+  </section>
+</main>
+
+  </main>
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer mt-5">
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6 footer-about">
+          <a href="index.html" class="d-flex align-items-center">
+            <span class="sitename">2R TRANS</span>
+          </a>
+          <div class="footer-contact pt-3">
+            <p>Kp. Saparako</p>
+            <p>Majalaya, Kabupaten Bandung, Jawa Barat 40382</p>
+            <p class="mt-3"><strong>Phone:</strong> <span>+6285141138240</span></p>
+            <p><strong>Email:</strong> <span>rizal@gmail.com</span></p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-12">
+          <h4>Follow Us</h4>
+          <p>Temukan promo menarik & info rute terbaru dari 2R Trans di media sosial kami.</p>
+          <div class="social-links d-flex">
+            <a href="#"><i class="bi bi-tiktok"></i></a>
+            <a href="#"><i class="bi bi-facebook"></i></a>
+            <a href="#"><i class="bi bi-instagram"></i></a>
+            <a href="https://wa.me/6285141138240"><i class="bi bi-whatsapp"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">2R TRANS</strong> <span>All Rights Reserved</span></p>
+      <div class="credits">
+        Designed by <a href="https://www.instagram.com/k.nfll?igsh=MThob3Y2aHE5bjh1cQ==">Kamal</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <div id="preloader"></div>
+
+  <!-- Vendor JS -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS -->
+  <script src="assets/js/main.js"></script>
+
+  <!-- WhatsApp Form Script -->
+<script>
+  function sendToWhatsApp(event) {
+    event.preventDefault();
+
+    var nama_pengirim = document.getElementById("nama_pengirim").value;
+    var hp_pengirim = document.getElementById("hp_pengirim").value;
+    var alamat_pengirim = document.getElementById("alamat_pengirim").value;
+    var nama_penerima = document.getElementById("nama_penerima").value;
+    var hp_penerima = document.getElementById("hp_penerima").value;
+    var alamat_penerima = document.getElementById("alamat_penerima").value;
+    var jenis_paket = document.getElementById("jenis_paket").value;
+    var berat = document.getElementById("berat").value;
+    var ukuran = document.getElementById("ukuran").value;
+    var catatan = document.getElementById("catatan").value;
+
+    var message =
+      "Halo, saya ingin mengirim paket ekspres melalui 2R Trans dengan detail berikut:\n\n" +
+      "📦 *Detail Pengiriman:*\n" +
+      "👤 Nama Pengirim: " + nama_pengirim + "\n" +
+      "📱 No HP Pengirim: " + hp_pengirim + "\n" +
+      "📍 Alamat Pengambilan: " + alamat_pengirim + "\n\n" +
+      "👤 Nama Penerima: " + nama_penerima + "\n" +
+      "📱 No HP Penerima: " + hp_penerima + "\n" +
+      "📍 Alamat Tujuan: " + alamat_penerima + "\n\n" +
+      "📦 Jenis Paket: " + jenis_paket + "\n" +
+      "⚖️ Berat: " + berat + " kg\n" +
+      "📐 Ukuran: " + ukuran + " cm\n" +
+      "📝 Catatan Tambahan: " + catatan;
+
+    var encodedMessage = encodeURIComponent(message);
+    var phoneNumber = "6285141138240";
+    var whatsappURL = "https://wa.me/" + phoneNumber + "?text=" + encodedMessage;
+
+    window.open(whatsappURL, '_blank');
+  }
+</script>
+
+
+</body>
+</html>
